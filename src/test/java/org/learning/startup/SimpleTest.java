@@ -1,16 +1,16 @@
 package org.learning.startup;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 
 public class SimpleTest {
@@ -50,7 +50,7 @@ public class SimpleTest {
        //Wait for 2 Sec
       Thread.sleep(2000);
       
-      WebElement loggedIn = driver.findElement(By.xpath("//span[@class='emg-fluid-text-content']"));
+      //WebElement loggedIn = driver.findElement(By.xpath("//span[@class='emg-fluid-text-content']"));
       
       
   	
@@ -88,7 +88,7 @@ WebElement emailInput =  driver.findElement(By.xpath("//input[@id='email']"));
       
       
       
-      boolean present;
+      boolean present=false;
       WebElement contulMeu;
       
       try {
@@ -100,7 +100,7 @@ WebElement emailInput =  driver.findElement(By.xpath("//input[@id='email']"));
             
           }
       
-      
+       System.out.println(present);	
        //Wait for 2 Sec
        Thread.sleep(2000);
   }
