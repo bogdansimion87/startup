@@ -10,15 +10,4 @@
       </class> <!-- org.learning.startup.SimpleTest -->
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="org.learning.startup.SimpleTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="testWrongPassPO"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- org.learning.startup.SimpleTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
