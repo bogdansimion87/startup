@@ -38,54 +38,6 @@ public class SimpleTest {
   
   
   
-  @Test
-  public void testWrongPasss() throws InterruptedException {  
-WebElement emailInput =  driver.findElement(By.xpath("//input[@id='email']"));  
-	  
-	  emailInput.sendKeys("bogdansimion87@gmail.com");
-	  
-	  //Wait for 2 Sec
-	  Thread.sleep(2000);
-	  
-	  WebElement continuaLink = driver.findElement(By.xpath("//button[@class='gui-btn auth-btn-primary auth-submit']"));
-	  
-	  continuaLink.click();
-	  
-	  //Wait for 2 Sec
-	  Thread.sleep(2000);
-	  
-	  WebElement passwordlInput =  driver.findElement(By.xpath("//input[@id='password']"));
-	  
-
-	  
-	  passwordlInput.sendKeys("Ciorani1987");
-	  
-	  //Wait for 2 Sec
-      Thread.sleep(2000);
-      
-      WebElement Login = driver.findElement(By.xpath("//button[@class='gui-btn auth-btn-primary auth-submit']"));     
-		
-      Login.click();
-      
-      
-      
-      boolean present;
-      WebElement contulMeu;
-      
-      try {
-            contulMeu = driver.findElement(By.xpath("//label[@id='Filedata']"));    
-            Assert.assertTrue(contulMeu.isDisplayed());
-            present = true;
-          } catch (NoSuchElementException e) {
-            present = false;
-            
-          }
-      
-      
-       //Wait for 2 Sec
-       Thread.sleep(2000);
-  }
-  
   @BeforeMethod
   public void beforeMethod() {
 	  
