@@ -2,6 +2,8 @@ package org.learning.startup;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import org.learning.startup.emag.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -55,6 +57,22 @@ public class SimpleTest {
       
   	
 	  
+  }
+  
+  @Test 
+  public void testLoggedInWithPO() throws InterruptedException
+  {
+	  LoginPage loginPage = new LoginPage(driver);
+	  loginPage.login("bogdansimion87@gmail.com", "Ciohorani1987");
+	  Assert.assertTrue(loginPage.getMyAccountLabel().isDisplayed(), "My Account Lable is displayed");
+  }
+  
+  @Test 
+  public void testWrongPassPO() throws InterruptedException
+  {
+	  LoginPage loginPage = new LoginPage(driver);
+	  loginPage.login("bogdansimion87@gmail.com", "Ciohorani19871");
+	 Assert.assertEquals(loginPage.getLogginErrorLabel(), "Ai introdus gresit parola sau adresa de email. Te rog completeaza din nou.");
   }
   
   @Test
