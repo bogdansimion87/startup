@@ -56,6 +56,6 @@ public class LoginPage {
 	}
 
 	public String getLogginErrorLabel() {	
-		return driver.findElement(By.xpath("")).getText();
+		return driver.findElement(By.xpath("//div[@class='gui-form-control -wide -error']/span")).getText();
 	}
 }

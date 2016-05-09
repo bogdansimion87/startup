@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\P3700645\AppData\Local\Temp\testng-eclipse--1560022228\testng-customsuite.xml</span>
+                    <span>C:\Users\P3700645\AppData\Local\Temp\testng-eclipse--459347046\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.learning.startup.SimpleTest" hash-for-method="testLoggedInWithPO">testLoggedInWithPO</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.learning.startup.SimpleTest" hash-for-method="testWrongPassPO">testWrongPassPO</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -125,14 +125,33 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoggedInWithPO">
-                  </a> <!-- testLoggedInWithPO -->
-                  <span class="method-name">testLoggedInWithPO</span>
-                  <div class="stack-trace">java.lang.AssertionError: My Account Lable is displayed expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertFalse(Assert.java:63)
-	at org.learning.startup.SimpleTest.testLoggedInWithPO(SimpleTest.java:67)
+                  <a name="testWrongPassPO">
+                  </a> <!-- testWrongPassPO -->
+                  <span class="method-name">testWrongPassPO</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: The given selector  is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Unable to locate an element with the xpath expression  because of the following error:
+SyntaxError: The expression is not a legal expression.
+Command duration or timeout: 27 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;C370012100028&apos;, ip: &apos;172.30.141.59&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: df31fe52-0d7d-4768-adab-5c20aacdeba7
+*** Element info: {Using=xpath, value=}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.learning.startup.emag.LoginPage.getLogginErrorLabel(LoginPage.java:59)
+	at org.learning.startup.SimpleTest.testWrongPassPO(SimpleTest.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -157,6 +176,19 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector  is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Unable to locate an element with the xpath expression  because of the following error:
+SyntaxError: The expression is not a legal expression.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;C370012100028&apos;, ip: &apos;172.30.141.59&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10744)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10775)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/P3700645/AppData/Local/Temp/anonymous7169514700017132071webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -166,7 +198,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\P3700645\AppData\Local\Temp\testng-eclipse--1560022228\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\P3700645\AppData\Local\Temp\testng-eclipse--459347046\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -177,7 +209,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;org.learning.startup.SimpleTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testLoggedInWithPO&quot;/&gt;
+          &lt;include name=&quot;testWrongPassPO&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- org.learning.startup.SimpleTest --&gt;
     &lt;/classes&gt;
@@ -221,14 +253,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLoggedInWithPO')
+data.setCell(0, 1, 'testWrongPassPO')
 data.setCell(0, 2, 'org.learning.startup.SimpleTest')
-data.setCell(0, 3, 12027);
+data.setCell(0, 3, 11130);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,15 +275,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">org.learning.startup.SimpleTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testWrongPasss</span>
-                <br/>
-                <span class="ignored-method-name">testLoggedIn</span>
+                <span class="ignored-method-name">testLoggedInWithPO</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -271,12 +301,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testLoggedInWithPO</span>
-                <span class="method-start">5412 ms</span>
+                <span class="method-name">testWrongPassPO</span>
+                <span class="method-start">5593 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">17442 ms</span>
+                <span class="method-start">16736 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
