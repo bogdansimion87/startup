@@ -1,6 +1,6 @@
 package org.learning.startup;
 
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 import org.learning.startup.emag.LoginPage;
@@ -20,45 +20,6 @@ public class SimpleTest {
   public WebDriver driver;
   
   
-  @Test
-  public void testLoggedIn() throws InterruptedException {
-	  
-	  WebElement emailInput =  driver.findElement(By.xpath("//input[@id='email']"));  
-	  
-	  emailInput.sendKeys("bogdansimion87@gmail.com");
-	  
-	  //Wait for 2 Sec
-	  Thread.sleep(2000);
-	  
-	  WebElement continuaLink = driver.findElement(By.xpath("//button[@class='gui-btn auth-btn-primary auth-submit']"));
-	  
-	  continuaLink.click();
-	  
-	  //Wait for 2 Sec
-	  Thread.sleep(2000);
-	  
-	  WebElement passwordlInput =  driver.findElement(By.xpath("//input[@id='password']"));
-	  
-	  passwordlInput.sendKeys("Ciohorani1987");
-	  
-	  //Wait for 2 Sec
-      Thread.sleep(2000);
-      
-      WebElement Login = driver.findElement(By.xpath("//button[@class='gui-btn auth-btn-primary auth-submit']"));     
-		
-      Login.click();
-      
-      
-       //Wait for 2 Sec
-      Thread.sleep(2000);
-      
-      WebElement loggedIn = driver.findElement(By.xpath("//span[@class='emg-fluid-text-content']"));
-      
-      
-  	
-	  
-  }
-  
   @Test 
   public void testLoggedInWithPO() throws InterruptedException
   {
@@ -72,8 +33,10 @@ public class SimpleTest {
   {
 	  LoginPage loginPage = new LoginPage(driver);
 	  loginPage.login("bogdansimion87@gmail.com", "Ciohorani19871");
-	 Assert.assertEquals(loginPage.getLogginErrorLabel(), "Ai introdus gresit parola sau adresa de email. Te rog completeaza din nou.");
+	  Assert.assertEquals(loginPage.getLogginErrorLabel(), "Ai introdus gresit parola sau adresa de email. Te rog completeaza din nou.");
   }
+  
+  
   
   @Test
   public void testWrongPasss() throws InterruptedException {  
