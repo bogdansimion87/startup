@@ -9,6 +9,7 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver) {
 		this.setDriver(driver);
+		
 	
 	}
 
