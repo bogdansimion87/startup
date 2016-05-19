@@ -12,23 +12,23 @@ public class LoginPageWithPageFactory {
 	public LoginPageWithPageFactory(WebDriver driver) {
 		this.setDriver(driver);
 		PageFactory.initElements(driver, this);
-		
+
 	}
-	
+
 	public WebDriver getDriver() {
 		return driver;
 	}
-	
+
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
 	}
+
+	@FindBy(how = How.XPATH, using = "//input[@id='email']")
+	WebElement txtbx_Password;
 	
-	
-	
-	
-	@FindBy(how = How.XPATH, using = "//input[@id='email']")                                         WebElement txtbx_Password;
-	@FindBy(how = How.XPATH, using = "//button[@class='gui-btn auth-btn-primary auth-submit']")      WebElement Password_submit_button;	
-	
+	@FindBy(how = How.XPATH, using = "//button[@class='gui-btn auth-btn-primary auth-submit']")
+	WebElement Password_submit_button;
+
 	public void submitEmail(String emailAddress) throws InterruptedException {
 		txtbx_Password.sendKeys(emailAddress);
 		Thread.sleep(2000);
@@ -36,50 +36,42 @@ public class LoginPageWithPageFactory {
 		Password_submit_button.click();
 		Thread.sleep(2000);
 	}
-	
-	
-	
-	
-	@FindBy(how = How.ID, using = "password")                                                        WebElement password_lInput;
-	@FindBy(how = How.XPATH, using = "//button[@class='gui-btn auth-btn-primary auth-submit']")      WebElement Login_button;
-	
+
+	@FindBy(id = "password")
+	WebElement password_lInput;
+
+	@FindBy(how = How.XPATH, using = "//button[@class='gui-btn auth-btn-primary auth-submit']")
+	WebElement Login_button;
+
 	public void submitPassword(String password) throws InterruptedException {
-				password_lInput.sendKeys(password);
+		password_lInput.sendKeys(password);
 
-		        // Wait for 2 Sec
-		        Thread.sleep(2000);
-		     
+		// Wait for 2 Sec
+		Thread.sleep(2000);
 
-		        Login_button.click();
+		Login_button.click();
 
-		        // Wait for 2 Sec
-		        Thread.sleep(2000);
-	}
-	
-		
-	
-	
-	@FindBy(how = How.XPATH, using = "//span[@class='emg-fluid-text-content']")                        WebElement Account_Label;
-	
-	public WebElement getMyAccountLabel()
-	{
-		 return Account_Label;
+		// Wait for 2 Sec
+		Thread.sleep(2000);
 	}
 
-	
-	
-	
-	@FindBy(how = How.XPATH, using = "//div[@class='gui-form-control -wide -error']/span")             WebElement Loggin_Error_Label;
-	
-	public String getLogginErrorLabel() {	
+	@FindBy(how = How.XPATH, using = "//span[@class='emg-fluid-text-content']")
+	WebElement Account_Label;
+
+	public WebElement getMyAccountLabel() {
+		return Account_Label;
+	}
+
+	@FindBy(how = How.XPATH, using = "//div[@class='gui-form-control -wide -error']/span")
+	WebElement Loggin_Error_Label;
+
+	public String getLogginErrorLabel() {
 		return Loggin_Error_Label.getText();
 	}
-	
-	
-	public void login(String emailAddress, String password) throws InterruptedException
-	{
+
+	public void login(String emailAddress, String password) throws InterruptedException {
 		submitEmail(emailAddress);
 		submitPassword(password);
 	}
-	
+
 }
